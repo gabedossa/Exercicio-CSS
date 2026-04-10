@@ -1,0 +1,13 @@
+{
+  "name": "praticas-css",
+  "version": "1.0.0",
+  "description": "Exercício de boas práticas de CSS",
+  "scripts": {
+    "build": "sass main.scss main.css",
+    "watch": "sass --watch main.scss:main.css"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

@@ -4,32 +4,192 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício boas práticas de CSS</title>
+    <title>Catálogo Premium de Produtos</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="produtos">
-        <div class="produto">
-            <img class="produto__imagem" src="https://via.placeholder.com/100x100">
-            <h4 class="produto__nome">Nome do produto</h4>
-            <p class="produto__descricao">
-                Descrição do produto
-            </p>
+    <!-- Navbar -->
+    <nav class="navbar" role="navigation" aria-label="Navegação principal">
+        <div class="navbar__container">
+            <!-- Logo -->
+            <a href="#" class="navbar__logo" aria-label="Logo da loja">
+                <span>✨</span>
+                <span>Premium</span>
+            </a>
+
+            <!-- Menu -->
+            <ul class="navbar__menu" id="menu">
+                <li><a href="#" class="navbar__link">Home</a></li>
+                <li><a href="#" class="navbar__link">Produtos</a></li>
+                <li><a href="#" class="navbar__link">Sobre</a></li>
+                <li><a href="#" class="navbar__link">Contato</a></li>
+            </ul>
+
+            <!-- Ações -->
+            <div class="navbar__acoes">
+                <button class="navbar__acao" aria-label="Pesquisar" title="Pesquisar">🔍</button>
+                <button class="navbar__acao" aria-label="Favoritos" title="Favoritos">♥️</button>
+                <button class="navbar__acao" aria-label="Carrinho de compras" title="Carrinho">🛒</button>
+                <button class="navbar__botao" aria-label="Compre Agora">Compre Agora</button>
+            </div>
+
+            <!-- Toggle Menu (Mobile) -->
+            <button class="navbar__toggle" id="toggle" aria-label="Abrir/Fechar menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <div class="produto produto--em-destaque">
-            <img class="produto__imagem" src="https://via.placeholder.com/100x100">
-            <h4 class="produto__nome">Nome do produto</h4>
-            <p class="produto__descricao">
-                Descrição do produto
-            </p>
+    </nav>
+
+    <header class="header">
+        <div class="header__content">
+            <h1 class="header__titulo">🛍️ Nossos Produtos</h1>
+            <p class="header__subtitulo">Qualidade, inovação e excelência em um só lugar</p>
         </div>
-        <div class="produto">
-            <img class="produto__imagem" src="https://via.placeholder.com/100x100">
-            <h4 class="produto__nome">Nome do produto</h4>
-            <p class="produto__descricao">
-                Descrição do produto
-            </p>
+    </header>
+
+    <section class="secao-produtos">
+        <div class="container">
+            <div class="filtros" role="group" aria-label="Filtrar produtos">
+                <button class="filtro filtro--ativo">Todos</button>
+                <button class="filtro">Premium</button>
+                <button class="filtro">Essencial</button>
+                <button class="filtro">Destaque</button>
+            </div>
+
+            <div class="produtos" role="list">
+                <div class="produto" role="listitem">
+                    <div class="produto__imagem-container">
+                        <img class="produto__imagem" src="https://via.placeholder.com/300x200/667eea/ffffff?text=Premium" alt="Produto Premium">
+                    </div>
+                    <div class="produto__conteudo">
+                        <h3 class="produto__nome">Produto Premium</h3>
+                        <p class="produto__descricao">
+                            Desenvolvido com a melhor tecnologia disponível no mercado
+                        </p>
+                        <div class="produto__preco">
+                            <span class="produto__valor">R$ 199,90</span>
+                            <button class="produto__botao">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto produto--em-destaque" role="listitem">
+                    <span class="produto__destaque">Destaque 🌟</span>
+                    <div class="produto__imagem-container">
+                        <img class="produto__imagem" src="https://via.placeholder.com/300x200/764ba2/ffffff?text=Exclusivo" alt="Produto Exclusivo">
+                    </div>
+                    <div class="produto__conteudo">
+                        <h3 class="produto__nome">Produto Exclusivo</h3>
+                        <p class="produto__descricao">
+                            Edição limitada com funcionalidades avançadas e design inovador
+                        </p>
+                        <div class="produto__preco">
+                            <span class="produto__valor">R$ 349,90</span>
+                            <button class="produto__botao">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto" role="listitem">
+                    <div class="produto__imagem-container">
+                        <img class="produto__imagem" src="https://via.placeholder.com/300x200/6c63ff/ffffff?text=Essencial" alt="Produto Essencial">
+                    </div>
+                    <div class="produto__conteudo">
+                        <h3 class="produto__nome">Produto Essencial</h3>
+                        <p class="produto__descricao">
+                            Solução robusta e confiável para o seu dia a dia
+                        </p>
+                        <div class="produto__preco">
+                            <span class="produto__valor">R$ 129,90</span>
+                            <button class="produto__botao">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto" role="listitem">
+                    <div class="produto__imagem-container">
+                        <img class="produto__imagem" src="https://via.placeholder.com/300x200/11998e/ffffff?text=Avançado" alt="Produto Avançado">
+                    </div>
+                    <div class="produto__conteudo">
+                        <h3 class="produto__nome">Produto Avançado</h3>
+                        <p class="produto__descricao">
+                            Recursos inteligentes para aumentar sua produtividade
+                        </p>
+                        <div class="produto__preco">
+                            <span class="produto__valor">R$ 279,90</span>
+                            <button class="produto__botao">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto" role="listitem">
+                    <div class="produto__imagem-container">
+                        <img class="produto__imagem" src="https://via.placeholder.com/300x200/FF6B6B/ffffff?text=Clássico" alt="Produto Clássico">
+                    </div>
+                    <div class="produto__conteudo">
+                        <h3 class="produto__nome">Produto Clássico</h3>
+                        <p class="produto__descricao">
+                            Confiabilidade comprovada com desempenho consistente
+                        </p>
+                        <div class="produto__preco">
+                            <span class="produto__valor">R$ 99,90</span>
+                            <button class="produto__botao">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto" role="listitem">
+                    <div class="produto__imagem-container">
+                        <img class="produto__imagem" src="https://via.placeholder.com/300x200/4ECDC4/ffffff?text=Inovador" alt="Produto Inovador">
+                    </div>
+                    <div class="produto__conteudo">
+                        <h3 class="produto__nome">Produto Inovador</h3>
+                        <p class="produto__descricao">
+                            Última geração em tecnologia e design moderno
+                        </p>
+                        <div class="produto__preco">
+                            <span class="produto__valor">R$ 319,90</span>
+                            <button class="produto__botao">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</body>
+    </section>
+
+    <footer class="footer">
+        <p class="footer__texto">© 2026 Catálogo Premium. Todos os direitos reservados a Gabriel Ouverney. Desenvolvido com ❤️ e boas práticas de CSS.</p>
+    </footer>
+    <script>
+        // Toggle Menu Mobile
+        const toggle = document.getElementById('toggle');
+        const menu = document.getElementById('menu');
+        const navLinks = document.querySelectorAll('.navbar__link');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('ativo');
+            toggle.classList.toggle('ativo');
+            toggle.setAttribute('aria-expanded', toggle.classList.contains('ativo'));
+        });
+
+        // Fechar menu ao clicar em um link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('ativo');
+                toggle.classList.remove('ativo');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Fechar menu ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.navbar')) {
+                menu.classList.remove('ativo');
+                toggle.classList.remove('ativo');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script></body>
 </html>
